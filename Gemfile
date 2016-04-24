@@ -11,6 +11,7 @@ group :development, :test do
   gem 'rake'
   gem 'foreman'
   gem 'byebug'
+  gem 'pry-byebug'
 end
 
 group :test do
