@@ -19,6 +19,9 @@ module Erik
       match /(\w*)analysis(\s.*)?/ do |client, data, match|
         client.say(channel: data.channel, text: "Yup. That is me. *Analysis* is my *middle name*.\nAnd *Squats*.")
       end
+      match /(\w*)(Erik|erik|@erik|key|api)(\s.*)?/ do |client, data, match|
+        client.say(channel: data.channel, text: "Give me your API key!")
+      end
     end
   end
 end
