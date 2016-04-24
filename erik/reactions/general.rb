@@ -1,11 +1,23 @@
 module Erik
   module Commands
     class General < SlackRubyBot::Commands::Base
-      match /^(W|s)here\s*.*/ do |client, data, match|
+      match /(W|w)hen(\s.*)?/ do |client, data, match|
+        client.say(channel: data.channel, text: "After I drink my proteins.")
+      end
+      match /(W|w)here(\s.*)?/ do |client, data, match|
         client.say(channel: data.channel, text: "At the gym.")
       end
-      match /^(W|s)hen\s*.*/ do |client, data, match|
-        client.say(channel: data.channel, text: "After i drink my proteins.")
+      match /(H|h)ow(\s.*)?/ do |client, data, match|
+        client.say(channel: data.channel, text: "By squatting. :troll:")
+      end
+      match /(W|w)hat(\s.*)?/ do |client, data, match|
+        client.say(channel: data.channel, text: "Only squats. Maybe deadlifts sometimes.")
+      end
+      match /(W|w)ith(\s.*)?/ do |client, data, match|
+        client.say(channel: data.channel, text: "With what? No way dude, we are dead serious about squats.")
+      end
+      match /(\w*)analysis(\s.*)?/ do |client, data, match|
+        client.say(channel: data.channel, text: "Yup. That is me. *Analysis* is my *middle name*.\nAnd *Squats*.")
       end
     end
   end
